@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
 })
 
 app.get('/api/v1/foods', foodsController.getFoods)
-
+app.get('/api/v1/foods/:id', foodsController.getSpecificFood)
 
 
 if(!module.parent) {
