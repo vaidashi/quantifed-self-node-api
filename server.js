@@ -34,6 +34,7 @@ app.delete('/api/v1/foods/:id', foodsController.deleteFood)
 
 app.get('/api/v1/meals', mealsController.getMealFoods)
 app.get('/api/v1/meals/:meal_id/foods', mealsController.getMeal)
+app.post('/api/v1/meals/:meal_id/foods/:id', mealsController.postFoodToMeal)
 
 
 if(!module.parent) {
