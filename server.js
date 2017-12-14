@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 })
 
 
-//////// endpoints below /////////
+
 app.get('/', function(request, response) {
   response.send(app.locals.title)
 })
@@ -45,5 +45,5 @@ if(!module.parent) {
 }
 
 
-/////exporting/////
+
 module.exports = app
