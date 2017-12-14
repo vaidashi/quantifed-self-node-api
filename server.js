@@ -13,12 +13,12 @@ app.locals.title = 'QS'
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-//   next();
-// })
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  next();
+})
 
 
 //////// endpoints below /////////
@@ -33,7 +33,7 @@ app.patch('/api/v1/foods/:id', foodsController.editFood)
 app.delete('/api/v1/foods/:id', foodsController.deleteFood)
 
 app.get('/api/v1/meals', mealsController.getMealFoods)
-
+app.get('/api/v1/meals/:meal_id/foods', mealsController.getMeal)
 
 
 if(!module.parent) {
