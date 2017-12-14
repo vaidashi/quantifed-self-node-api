@@ -1,6 +1,6 @@
 # quantifed-self-node-api
 
-This project is the backend of a single user meal calorie tracking application built in NodeJS and Express. The frontend can be viewed at https://sidewinder2020.github.io/quantified-self-starter-kit/
+This project is the backend of a single user meal calorie tracking application built in NodeJS and Express. The frontend can be viewed at https://github.com/sidewinder2020/quantified-self-starter-kit
 
 ## To Run the App Locally
 1. Clone this repo
